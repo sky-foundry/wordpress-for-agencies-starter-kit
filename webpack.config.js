@@ -4,7 +4,7 @@ Encore.setOutputPath('web/app/themes/default-theme/dist/')
   // public path used by the web server to access the output path
   .setPublicPath('/app/themes/default-theme/dist')
   // only needed for CDN's or sub-directory deploy
-  //.setManifestKeyPrefix('build/')
+  .setManifestKeyPrefix('dist/')
   /*
    * ENTRY CONFIG
    *
@@ -14,7 +14,8 @@ Encore.setOutputPath('web/app/themes/default-theme/dist/')
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
-  .addEntry('app', './web/app/themes/default-theme/src/app.js')
+  .addEntry('main', './web/app/themes/default-theme/javascript/main.js')
+  .addStyleEntry('app', './web/app/themes/default-theme/css/app.css')
   //.addEntry('page1', './assets/js/page1.js')
   //.addEntry('page2', './assets/js/page2.js')
 

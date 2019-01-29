@@ -1,8 +1,8 @@
 {% block html_head_container %}
-
-{% include 'html-header.twig' %}
+	{% include 'html-header.twig' %}
 	{% block head %}
 	{% endblock %}
+	<link rel="stylesheet" href="{{ asset('dist/app.css') }}" />
 	</head>
 {% endblock %}
 
@@ -41,5 +41,7 @@
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
+		<script src="{{ asset('dist/runtime.js') }}"></script>
+		<script src="{{ asset('dist/main.js') }}"></script>
 	</body>
 </html>

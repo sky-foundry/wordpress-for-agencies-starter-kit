@@ -14,11 +14,18 @@ if ( ! class_exists( 'Timber' ) ) {
 	});
 
 	add_filter('template_include', function( $template ) {
-		return get_stylesheet_directory() . '/src/no-timber.html';
+		return get_stylesheet_directory() . '/static/no-timber.html';
 	});
 
 	return;
 }
+
+use Symfony\Component\Asset\Packages;
+use Symfony\Component\Asset\PathPackage;
+use Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy;
+use Symfony\Bridge\Twig\Extension\AssetExtension;
+use Symfony\Bridge\Twig\Extension\DumpExtension;
+use Symfony\Component\VarDumper\Cloner\VarCloner;
 
 /**
  * Sets the directories (inside your theme) to find .twig files
@@ -122,7 +129,22 @@ class StarterSite extends Timber\Site {
 	 * @param string $twig get extension.
 	 */
 	public function add_to_twig( $twig ) {
-		$twig->addExtension( new Twig_Extension_StringLoader() );
+		$twig->addExtension(new Twig_Extension_StringLoader());
+
+		$versionStrategy = new JsonManifestVersionStrategy(
+			get_template_directory() . '/dist/manifest.json'
+		);
+		
+		$packages = new Packages(new PathPackage('/', $versionStrategy));
+		$twig->addExtension(new AssetExtension($packages));
+		
+		/**
+		 * Add DEBUG extensions
+		 */
+		if (defined('WP_DEBUG') && WP_DEBUG) {
+			$twig->addExtension(new DumpExtension(new VarCloner()));
+		}
+		
 		return $twig;
 	}
 
