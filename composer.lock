@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9972d281cc8681d11bd9a2bc16536c1",
+    "content-hash": "bb030f5eaa317c765540e59b8c2edf31",
     "packages": [
         {
             "name": "composer/installers",
@@ -127,6 +127,102 @@
             "time": "2018-08-27T06:10:37+00:00"
         },
         {
+            "name": "fig/link-util",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/link-util.git",
+                "reference": "1a07821801a148be4add11ab0603e4af55a72fac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/link-util/zipball/1a07821801a148be4add11ab0603e4af55a72fac",
+                "reference": "1a07821801a148be4add11ab0603e4af55a72fac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/link": "~1.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.1",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fig\\Link\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common utility implementations for HTTP links",
+            "keywords": [
+                "http",
+                "http-link",
+                "link",
+                "psr",
+                "psr-13",
+                "rest"
+            ],
+            "time": "2016-10-17T18:31:11+00:00"
+        },
+        {
+            "name": "hellonico/timber-weblink-extension",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nlemoine/timber-weblink-extension.git",
+                "reference": "99d82db1f0d42b3052ecfa5a6a6aa2346d4619ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nlemoine/timber-weblink-extension/zipball/99d82db1f0d42b3052ecfa5a6a6aa2346d4619ab",
+                "reference": "99d82db1f0d42b3052ecfa5a6a6aa2346d4619ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9 || >=7.0.8",
+                "symfony/web-link": "^4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HelloNico\\Twig\\": "src/"
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Lemoine",
+                    "email": "dev@helloni.co",
+                    "homepage": "https://github.com/nlemoine"
+                }
+            ],
+            "description": "Timber WebLink Twig extension.",
+            "homepage": "https://github.com/nlemoine/twig-dump-extension",
+            "time": "2018-11-24T09:47:49+00:00"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.1.0",
             "source": {
@@ -167,6 +263,55 @@
                 "env"
             ],
             "time": "2017-07-17T20:41:59+00:00"
+        },
+        {
+            "name": "psr/link",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/link.git",
+                "reference": "eea8e8662d5cd3ae4517c9b864493f59fca95562"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/link/zipball/eea8e8662d5cd3ae4517c9b864493f59fca95562",
+                "reference": "eea8e8662d5cd3ae4517c9b864493f59fca95562",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Link\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for HTTP links",
+            "keywords": [
+                "http",
+                "http-link",
+                "link",
+                "psr",
+                "psr-13",
+                "rest"
+            ],
+            "time": "2016-10-28T16:06:13+00:00"
         },
         {
             "name": "roots/wordpress",
@@ -362,6 +507,77 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
+            "name": "symfony/web-link",
+            "version": "v4.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-link.git",
+                "reference": "da799546d05eb5f6e58c90b819cacb556b46e511"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-link/zipball/da799546d05eb5f6e58c90b819cacb556b46e511",
+                "reference": "da799546d05eb5f6e58c90b819cacb556b46e511",
+                "shasum": ""
+            },
+            "require": {
+                "fig/link-util": "^1.0",
+                "php": "^7.1.3",
+                "psr/link": "^1.0"
+            },
+            "require-dev": {
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/http-foundation": "~3.4|~4.0",
+                "symfony/http-kernel": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\WebLink\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "dunglas@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony WebLink Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dns-prefetch",
+                "http",
+                "http2",
+                "link",
+                "performance",
+                "prefetch",
+                "preload",
+                "prerender",
+                "psr13",
+                "push"
+            ],
+            "time": "2019-01-03T09:07:35+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.5.1",
             "source": {
@@ -452,6 +668,26 @@
             "homepage": "https://wordpress.org/plugins/timber-library/"
         },
         {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-seo",
             "version": "9.5",
             "source": {
@@ -473,6 +709,188 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "djboris88/timber-commented-include",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/djboris88/timber-commented-include.git",
+                "reference": "21217676d5793d5da27d1d8f37b217462222628f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/djboris88/timber-commented-include/zipball/21217676d5793d5da27d1d8f37b217462222628f",
+                "reference": "21217676d5793d5da27d1d8f37b217462222628f",
+                "shasum": ""
+            },
+            "require": {
+                "djboris88/twig-commented-include": "^1.1",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Djboris88\\Timber\\": "src/"
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Boris Đemrovski",
+                    "email": "djboris88@gmail.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Twig extension for Timber which outputs HTML comments before and after the `include` tag",
+            "homepage": "https://github.com/djboris88/timber-include-comments",
+            "keywords": [
+                "comments",
+                "debug",
+                "html",
+                "twig"
+            ],
+            "time": "2018-12-03T16:20:34+00:00"
+        },
+        {
+            "name": "djboris88/twig-commented-include",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/djboris88/twig-commented-include.git",
+                "reference": "424e0132e5416eadb3b02b7288b5a9d9df6b2475"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/djboris88/twig-commented-include/zipball/424e0132e5416eadb3b02b7288b5a9d9df6b2475",
+                "reference": "424e0132e5416eadb3b02b7288b5a9d9df6b2475",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "twig/twig": "^1.14|^2.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^2.7|^3.2",
+                "symfony/twig-bundle": "^2.7|^3.2"
+            },
+            "suggest": {
+                "symfony/framework-bundle": "The framework bundle to integrate the extension into Symfony",
+                "symfony/twig-bundle": "The twig bundle to integrate the extension into Symfony"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Djboris88\\Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Boris Đemrovski",
+                    "email": "djboris88@gmail.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Twig extension which outputs HTML comments before and after the `include` tag",
+            "homepage": "https://github.com/djboris88/twig-include-comments",
+            "keywords": [
+                "comments",
+                "debug",
+                "html",
+                "twig"
+            ],
+            "time": "2018-12-03T16:17:27+00:00"
+        },
+        {
+            "name": "hellonico/timber-dump-extension",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nlemoine/timber-dump-extension.git",
+                "reference": "306804f56148b29e712fc1a12b2137800908c08f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nlemoine/timber-dump-extension/zipball/306804f56148b29e712fc1a12b2137800908c08f",
+                "reference": "306804f56148b29e712fc1a12b2137800908c08f",
+                "shasum": ""
+            },
+            "require": {
+                "hellonico/twig-dump-extension": "^0.1.0",
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HelloNico\\Timber\\": "src/"
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Lemoine",
+                    "email": "dev@helloni.co",
+                    "homepage": "https://github.com/nlemoine"
+                }
+            ],
+            "description": "Provides Symfony VarDumper component for Timber",
+            "homepage": "https://github.com/nlemoine/timber-dump-extension",
+            "time": "2018-02-26T10:18:50+00:00"
+        },
+        {
+            "name": "hellonico/twig-dump-extension",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nlemoine/twig-dump-extension.git",
+                "reference": "3d35d16041f4a53a305743757760f069ac7f3596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nlemoine/twig-dump-extension/zipball/3d35d16041f4a53a305743757760f069ac7f3596",
+                "reference": "3d35d16041f4a53a305743757760f069ac7f3596",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/var-dumper": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HelloNico\\Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Lemoine",
+                    "email": "dev@helloni.co",
+                    "homepage": "https://github.com/nlemoine"
+                }
+            ],
+            "description": "VarDumper Twig extension",
+            "homepage": "https://github.com/nlemoine/twig-dump-extension",
+            "time": "2017-10-02T20:41:19+00:00"
+        },
         {
             "name": "roave/security-advisories",
             "version": "dev-master",
@@ -725,6 +1143,279 @@
                 "standards"
             ],
             "time": "2018-12-19T23:57:18+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "backendtea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-08-06T14:22:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.4.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "a5f39641bb62e8b74e343467b145331273f615a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a5f39641bb62e8b74e343467b145331273f615a2",
+                "reference": "a5f39641bb62e8b74e343467b145331273f615a2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2019-01-01T13:45:19+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "7d7342c8a4059fefb9b8d07db0cc14007021f9b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7d7342c8a4059fefb9b8d07db0cc14007021f9b7",
+                "reference": "7d7342c8a4059fefb9b8d07db0cc14007021f9b7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-mbstring": "^1.3"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2019-01-14T15:00:48+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar/"
         }
     ],
     "aliases": [],

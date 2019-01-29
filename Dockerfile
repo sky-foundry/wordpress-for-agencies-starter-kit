@@ -69,6 +69,7 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer && composer global require hirak/prestissimo --no-plugins --no-scripts
+RUN composer global require wp-cli/wp-cli
 
 WORKDIR /var/www/html
 
