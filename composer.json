@@ -55,7 +55,8 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
     "roave/security-advisories": "dev-master",
-    "wpackagist-plugin/debug-bar": "^1.0"
+    "wpackagist-plugin/debug-bar": "^1.0",
+    "symfony/var-dumper": "^4.2"
   },
   "extra": {
     "installer-paths": {

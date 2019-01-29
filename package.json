@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "encore dev-server --watch",
+    "dev": "docker-compose up -d && encore dev-server --watch",
     "build": "encore production"
   },
   "devDependencies": {
