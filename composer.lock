@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba84c8ea76804a6bd1013013c0a63fbb",
+    "content-hash": "e319a5206e29ba26184997612af20e8f",
     "packages": [
         {
             "name": "composer/installers",
@@ -851,6 +851,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/timber-library/"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "7.1.20",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "tags/7.1.20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.7.1.20.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/"
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
