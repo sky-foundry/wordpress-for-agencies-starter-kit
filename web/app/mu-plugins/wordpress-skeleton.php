@@ -67,3 +67,16 @@ add_action('init', function () {
         }
     });
 });
+
+// Disable "Post via email"
+add_filter('enable_post_by_email_configuration', '__return_false', 100);
+
+/**
+ * Disable "Theme" and "Customise" in the sidebar menu
+ */
+add_action('admin_init', function () {
+    global $submenu;
+    
+    unset($submenu['themes.php'][5]);
+    unset($submenu['themes.php'][6]);
+});
