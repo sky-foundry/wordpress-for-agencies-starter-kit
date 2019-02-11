@@ -20,7 +20,7 @@ add_filter('option_permalink_structure', function ($option) {
  * Set the default theme
  */
 function wordpress_skeleton_default_theme () {
-    return 'default-theme';
+    return WP_DEFAULT_THEME;
 }
 
 add_filter('stylesheet', 'wordpress_skeleton_default_theme');
