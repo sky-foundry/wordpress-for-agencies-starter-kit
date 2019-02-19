@@ -2,6 +2,19 @@ version: '3.3'
 
 services:
   db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  db_proxy:
     image: gcr.io/cloudsql-docker/gce-proxy:1.12
     ports:
       - '3307:3306'
