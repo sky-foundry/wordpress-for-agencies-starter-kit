@@ -2,17 +2,20 @@ version: '3.3'
 
 services:
   db:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
+    image: gcr.io/cloudsql-docker/gce-proxy:1.12
     ports:
-      - '3306:3306'
+      - '3307:3306'
+    volumes:
+      - ./.private/dev-sql-proxy.json:/config/dev-sql-proxy.json
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+    command:
+      [
+        '/cloud_sql_proxy',
+        '-instances',
+        'sky-foundry:australia-southeast1:wordpress-generic=tcp:0.0.0.0:3306',
+        '-credential_file',
+        '/config/dev-sql-proxy.json',
+      ]
 
   wordpress:
     depends_on:
@@ -26,7 +29,7 @@ services:
     restart: always
     environment:
       WP_ENV: development
-      WP_HOME: http://localhost:8000
+      WP_HOME: http://$LOCAL_IP:8000
       DB_HOST: db:3306
       DB_NAME: wordpress
       DB_USER: wordpress

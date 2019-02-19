@@ -21,11 +21,14 @@
   - Generate with [our WordPress salts generator](https://roots.io/salts.html)
   - Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
 
-4. Start the development environment. _Note: Docker must be running on your machine before executing the command below_
+4. Add the `dev-sql-proxy.json` credentials to `.private`.
+   _See https://sky-foundry.slack.com/archives/CG5D6LWR0/p1550023029002200_
+
+5. Start the development environment. _Note: Docker must be running on your machine before executing the command below_
    ```sh
    $ yarn run dev
    ```
-5. You can now access the new Wordpress instance at http://localhost:8000.
+6. You can now access the new Wordpress instance at http://localhost:8000.
 
 ## Documentation
 

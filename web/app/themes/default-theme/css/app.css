@@ -1,4 +1,1 @@
-body {
-  background-color: white;
-  color: #111;
-}
+@import 'tachyons/src/tachyons';

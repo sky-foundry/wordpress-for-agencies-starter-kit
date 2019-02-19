@@ -6,10 +6,21 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "docker-compose up -d && encore dev-server --watch",
+    "dev": "export LOCAL_IP=$(ifconfig | grep \"inet \" | grep -Fv 127.0.0.1 | awk '{print $2}') && docker-compose up -d && encore dev-server --watch --host $LOCAL_IP --disable-host-check",
     "build": "encore production"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.22.4"
+    "@symfony/webpack-encore": "^0.22.4",
+    "autoprefixer": "^9.4.7",
+    "postcss-current-selector": "^0.0.3",
+    "postcss-custom-media": "^7.0.7",
+    "postcss-custom-properties": "^8.0.9",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "tachyons": "^4.11.1"
   }
 }

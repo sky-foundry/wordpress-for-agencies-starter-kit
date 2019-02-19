@@ -23,5 +23,6 @@ Encore.setOutputPath(`web/app/themes/${themeName}/dist/`)
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
+  .enablePostCssLoader()
 
 module.exports = Encore.getWebpackConfig()

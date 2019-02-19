@@ -30,13 +30,19 @@ use Symfony\Component\VarDumper\Cloner\VarCloner;
 /**
  * Sets the directories (inside your theme) to find .twig files
  */
-Timber::$dirname = array( 'templates', 'views' );
+Timber::$dirname = array('templates', 'views');
 
 /**
  * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
  * No prob! Just set this value to true
  */
 Timber::$autoescape = false;
+
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page([
+        'page_title' => 'Theme Settings'
+    ]);
+}
 
 
 /**
@@ -46,18 +52,22 @@ Timber::$autoescape = false;
 class StarterSite extends Timber\Site {
 	/** Add timber support. */
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
-		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
-		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action('after_setup_theme', array($this, 'theme_supports'));
+		add_filter('timber_context', array($this, 'add_to_context'));
+		add_filter('get_twig', array($this, 'add_to_twig'));
+		add_action('init', array($this, 'register_post_types'));
+		add_action('init', array($this, 'register_taxonomies'));
+        add_filter('acf/settings/save_json', array($this, 'acf_save_point'));
+        add_filter('acf/settings/load_json', array($this, 'acf_load_point'));
 		parent::__construct();
 	}
-	/** This is where you can register custom post types. */
+    
+    /** This is where you can register custom post types. */
 	public function register_post_types() {
 
 	}
-	/** This is where you can register custom taxonomies. */
+    
+    /** This is where you can register custom taxonomies. */
 	public function register_taxonomies() {
 
 	}
@@ -66,15 +76,16 @@ class StarterSite extends Timber\Site {
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
-	public function add_to_context( $context ) {
+	public function add_to_context($context) {
 		$context['menu'] = new Timber\Menu();
 		$context['site'] = $this;
+        $context['options'] = get_fields('options');
 		return $context;
 	}
 
 	public function theme_supports() {
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -82,14 +93,14 @@ class StarterSite extends Timber\Site {
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -121,14 +132,14 @@ class StarterSite extends Timber\Site {
 			)
 		);
 
-		add_theme_support( 'menus' );
+		add_theme_support('menus');
 	}
 
 	/** This is where you can add your own functions to twig.
 	 *
 	 * @param string $twig get extension.
 	 */
-	public function add_to_twig( $twig ) {
+	public function add_to_twig($twig) {
 		$twig->addExtension(new Twig_Extension_StringLoader());
 
 		$versionStrategy = new JsonManifestVersionStrategy(
