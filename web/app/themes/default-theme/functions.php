@@ -158,6 +158,19 @@ class StarterSite extends Timber\Site {
 		
 		return $twig;
 	}
+ 
+	public function acf_save_point($path) {
+		$path = get_stylesheet_directory() . '/fields';
+    	return $path;
+    }
+    
+    public function acf_load_point($paths) {
+        // append path
+        $paths[] = get_stylesheet_directory() . '/fields';
+        
+        // return
+        return $paths;
+    }
 
 }
 
