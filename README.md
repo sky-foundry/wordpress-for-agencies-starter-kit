@@ -15,21 +15,21 @@
    ```sh
    $ composer install && yarn install
    ```
-3. Update environment variables in the `.env` file in the project root:
-
-- `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
-  - Generate with [our WordPress salts generator](https://roots.io/salts.html)
-  - Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
-
-4. Add the `dev-sql-proxy.json` credentials to `.private`.
-   _See https://sky-foundry.slack.com/archives/CG5D6LWR0/p1550023029002200_
-
-5. Start the development environment. _Note: Docker must be running on your machine before executing the command below_
+3. Start the development environment. _Note: Docker must be running on your machine before executing the command below_
    ```sh
    $ yarn run dev
    ```
-6. You can now access the new Wordpress instance at http://localhost:8000.
+4. You can now access the new Wordpress instance at http://localhost:8000.
 
-## Documentation
+## Using Cloud SQL
+
+1. Add the `dev-sql-proxy.json` credentials to the directory `.private` in the project root.
+   _See https://sky-foundry.slack.com/archives/CG5D6LWR0/p1550023029002200_
+
+2. Within the `docker-compose.yml` file, comment out the existing mysql service and then uncomment the db proxy service.
+
+3. Start the development environment like normal.
+
+## Bedrock Documentation
 
 Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
