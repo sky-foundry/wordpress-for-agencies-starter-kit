@@ -41,7 +41,9 @@
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
-		<script src="{{ asset('dist/runtime.js') }}"></script>
-		<script src="{{ asset('dist/main.js') }}"></script>
+    {% block javascript %}
+		  <script src="{{ asset('dist/runtime.js') }}"></script>
+		  <script src="{{ asset('dist/main.js') }}"></script>
+    {% endblock %}
 	</body>
 </html>
