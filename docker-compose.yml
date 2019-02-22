@@ -41,6 +41,7 @@ services:
       - ./:/var/www/html
     restart: always
     environment:
+      SKIP_CHOWN: 1
       WP_ENV: development
       WP_HOME: http://$LOCAL_IP:8000
       DB_HOST: db:3306
