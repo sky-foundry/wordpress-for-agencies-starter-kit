@@ -222,6 +222,7 @@ ADD docker/config/nginx.conf /etc/nginx/nginx.conf
 ADD docker/config/performance/ /etc/nginx/performance/
 ADD docker/config/security/ /etc/nginx/security/
 ADD docker/config/media-types/ /etc/nginx/media-types/
+ADD docker/config/global/ /etc/nginx/global/
 
 # nginx site conf
 RUN mkdir -p /etc/nginx/sites-available/ && \
@@ -231,7 +232,6 @@ RUN mkdir -p /etc/nginx/sites-available/ && \
     mkdir /var/www/html/
 ADD docker/config/nginx-site.conf /etc/nginx/sites-available/default.conf
 ADD docker/config/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
-ADD docker/config/global/ /etc/nginx/sites-available/global/
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # tweak php-fpm config
