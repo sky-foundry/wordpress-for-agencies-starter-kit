@@ -30,6 +30,7 @@
     "wpackagist-plugin/wordfence": "^7.1",
     "wpackagist-plugin/wordpress-importer": "^0.6.4",
     "wpackagist-plugin/wordpress-seo": "^9.5",
+    "wpackagist-plugin/wp-migrate-db": "^1.0",
     "wpackagist-plugin/wp-stateless": "^2.2"
   },
   "require-dev": {
