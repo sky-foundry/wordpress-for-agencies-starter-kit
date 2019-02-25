@@ -211,7 +211,8 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php -r "if (hash_file('SHA384', 'composer-setup.php') === '${EXPECTED_COMPOSER_SIGNATURE}') { echo 'Composer.phar Installer verified'; } else { echo 'Composer.phar Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
     php composer-setup.php --install-dir=/usr/bin --filename=composer && \
-    php -r "unlink('composer-setup.php');"  && \
+    php -r "unlink('composer-setup.php');" && \
+    composer global require hirak/prestissimo && \
     apk del gcc wget musl-dev linux-headers libffi-dev augeas-dev make autoconf
 
 ADD docker/config/supervisord.conf /etc/supervisord.conf
