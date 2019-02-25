@@ -9,7 +9,10 @@ COPY yarn.lock ./
 RUN yarn install \
     && yarn cache clean
 
-COPY . .
+COPY ./web/app/themes ./web/app/themes
+
+COPY postcss.config.js ./
+COPY webpack.config.js ./
 
 RUN yarn run build
 

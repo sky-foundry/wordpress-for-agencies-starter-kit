@@ -7,10 +7,9 @@
 /CODE_OF_CONDUCT.md
 /docker-compose.yml
 /.dockerignore  
+/Dockerfile
+/cloudbuild.yaml
 /vendor
 /node_modules
 /web/wp
-/web/app/uploads
-/web/app/plugins
-/web/app/upgrade
-/web/app/themes/default-theme/dist
+/web/app
