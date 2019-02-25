@@ -24,7 +24,7 @@
    $ gcloud auth login
    $ gcloud auth configure-docker
    ```
-   You should be able to re-run the `yarn run dev` command and the image will build successfully.
+   You should be able to re-run the `yarn run dev` command and the image will build successfully. If you still receive a permission error, it may be that you need read access on the appropriate Storage Bucket.
 4. You can now access the new Wordpress instance at http://localhost:8000.
 
 ## Using Cloud SQL
