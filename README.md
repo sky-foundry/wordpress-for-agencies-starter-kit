@@ -19,6 +19,12 @@
    ```sh
    $ yarn run dev
    ```
+   If the command fails when trying to build the wordpress image, you will need to check that you are correctly authenticated with gcloud.
+   ```sh
+   $ gcloud auth login
+   $ gcloud auth configure-docker
+   ```
+   You should be able to re-run the `yarn run dev` command and the image will build successfully.
 4. You can now access the new Wordpress instance at http://localhost:8000.
 
 ## Using Cloud SQL
