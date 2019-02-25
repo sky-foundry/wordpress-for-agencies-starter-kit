@@ -12,4 +12,8 @@
 /vendor
 /node_modules
 /web/wp
-/web/app
+/web/app/cache
+/web/app/mu-plugins
+/web/app/plugins
+/web/app/uploads
+/web/app/wflogs
