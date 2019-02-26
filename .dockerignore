@@ -3,12 +3,9 @@
 /dive.log
 /LICENSE.md
 /README.md
-/CHANGELOG.md
-/CODE_OF_CONDUCT.md
 /docker-compose.yml
 /.dockerignore  
 /Dockerfile
-/cloudbuild.yaml
 /vendor
 /node_modules
 /web/app/cache

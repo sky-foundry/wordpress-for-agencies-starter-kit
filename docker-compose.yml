@@ -16,24 +16,6 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
-  # db:
-  #   image: gcr.io/cloudsql-docker/gce-proxy:1.12
-  #   ports:
-  #     - '3306:3306'
-  #   volumes:
-  #     - ./.private/dev-sql-proxy.json:/config/dev-sql-proxy.json
-  #   restart: always
-  #   logging:
-  #     driver: none
-  #   command:
-  #     [
-  #       '/cloud_sql_proxy',
-  #       '-instances',
-  #       'sky-foundry:australia-southeast1:wordpress-generic=tcp:0.0.0.0:3306',
-  #       '-credential_file',
-  #       '/config/dev-sql-proxy.json',
-  #     ]
-
   wordpress:
     depends_on:
       - db
