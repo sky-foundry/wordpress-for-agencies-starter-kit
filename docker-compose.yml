@@ -8,6 +8,8 @@ services:
     ports:
       - '3306:3306'
     restart: always
+    logging:
+      driver: none
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
@@ -21,6 +23,8 @@ services:
   #   volumes:
   #     - ./.private/dev-sql-proxy.json:/config/dev-sql-proxy.json
   #   restart: always
+  #   logging:
+  #     driver: none
   #   command:
   #     [
   #       '/cloud_sql_proxy',
@@ -40,6 +44,8 @@ services:
     volumes:
       - ./:/var/www/html
     restart: always
+    logging:
+      driver: none
     environment:
       SKIP_CHOWN: 1
       WP_ENV: development
@@ -51,6 +57,8 @@ services:
 
   mailhog:
     image: mailhog/mailhog
+    logging:
+      driver: none
     ports:
       - '1025:1025'
       - '8025:8025'
