@@ -13,7 +13,6 @@ web/app/cache/*
 
 # WordPress
 web/wp
-web/.htaccess
 
 # Theme
 web/app/themes/default-theme/dist/*

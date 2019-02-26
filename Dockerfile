@@ -17,7 +17,7 @@ COPY webpack.config.js ./
 RUN yarn run build
 
 # Now create our image which will run the Wordpress instance
-FROM gcr.io/sky-foundry/docker-nginx-php:latest
+FROM skyfoundryagency/docker-nginx-php:latest
 
 COPY composer.json .
 COPY composer.lock .
