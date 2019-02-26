@@ -7,13 +7,13 @@ handle_signal () {
   exit;
 }
 
-_trap () {
+trap_signals () {
   for signal in "$@"
   do
     trap "handle_signal" "$signal"
   done
 }
 
-_trap INT KILL STOP
+trap_signals INT KILL STOP
 
-docker-compose up -d && yarn --cwd web/app/themes/default-theme run encore dev-server --watch --host $LOCAL_IP --disable-host-check;
+docker-compose up -d && yarn --cwd web/app/themes/default-theme run dev --host $LOCAL_IP --disable-host-check;

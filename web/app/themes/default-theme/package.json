@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "dev": "encore dev-server --watch",
     "build": "encore production"
   },
   "devDependencies": {
