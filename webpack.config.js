@@ -3,9 +3,8 @@ const Encore = require('@symfony/webpack-encore')
 const themeName = 'default-theme'
 
 Encore.setOutputPath(`web/app/themes/${themeName}/dist/`)
-  // public path used by the web server to access the output path
+  // Public path used by the web server to access the output path
   .setPublicPath(`/app/themes/${themeName}/dist`)
-  // only needed for CDN's or sub-directory deploy
   .setManifestKeyPrefix('dist/')
   /*
    * ENTRY CONFIG
@@ -23,6 +22,11 @@ Encore.setOutputPath(`web/app/themes/${themeName}/dist/`)
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
+  /*
+   * You can enable Sass support if you prefer to use that instead of PostCSS
+   * Just make sure to comment out 'enablePostCssLoader()' below
+   */
+  // .enableSassLoader()
   .enablePostCssLoader()
 
 module.exports = Encore.getWebpackConfig()
