@@ -91,6 +91,15 @@ Config::define('DISALLOW_FILE_MODS', true);
 Config::define('SKELETON_OVERRIDE_SMTP', false);
 
 /**
+ * Wordpress Stateless https://github.com/wpCloud/wp-stateless/wiki/Constants
+ */
+Config::define('WP_STATELESS_MEDIA_MODE', 'stateless');
+Config::define('WP_STATELESS_COMPATIBILITY_ACFIC', true);
+Config::define('WP_STATELESS_MEDIA_DELETE_REMOTE', true);
+Config::define('WP_STATELESS_MEDIA_HIDE_SETUP_ASSISTANT', true);
+Config::define('WP_STATELESS_MEDIA_HIDE_SETTINGS_PANEL', true);
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);
