@@ -1,5 +1,7 @@
 # Application
 .private/*
+web/app/mu-plugins
+!web/app/mu-plugins/advanced-custom-fields-pro
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/upgrade
