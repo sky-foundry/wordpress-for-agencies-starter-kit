@@ -7,22 +7,9 @@
   "private": true,
   "scripts": {
     "dev": "./scripts/dev.sh",
-    "build": "encore production"
+    "build": "yarn --cwd web/app/themes/default-theme run build"
   },
-  "devDependencies": {
-    "@symfony/webpack-encore": "^0.22.4",
-    "autoprefixer": "^9.4.7",
-    "concurrently": "^4.1.0",
-    "cross-env": "^5.2.0",
-    "postcss-current-selector": "^0.0.3",
-    "postcss-custom-media": "^7.0.7",
-    "postcss-custom-properties": "^8.0.9",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.1.1",
-    "stylelint-config-standard": "^18.2.0"
-  },
-  "dependencies": {
-    "tachyons": "^4.11.1"
-  }
+  "workspaces": [
+    "web/app/themes/*"
+  ]
 }

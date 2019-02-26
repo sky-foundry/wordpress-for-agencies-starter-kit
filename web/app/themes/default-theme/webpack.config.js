@@ -1,10 +1,8 @@
 const Encore = require('@symfony/webpack-encore')
 
-const themeName = 'default-theme'
-
-Encore.setOutputPath(`web/app/themes/${themeName}/dist/`)
+Encore.setOutputPath(`dist/`)
   // Public path used by the web server to access the output path
-  .setPublicPath(`/app/themes/${themeName}/dist`)
+  .setPublicPath('/app/themes/default-theme/dist')
   .setManifestKeyPrefix('dist/')
   /*
    * ENTRY CONFIG
@@ -15,8 +13,8 @@ Encore.setOutputPath(`web/app/themes/${themeName}/dist/`)
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
-  .addEntry('main', `./web/app/themes/${themeName}/javascript/main.js`)
-  .addStyleEntry('app', `./web/app/themes/${themeName}/css/app.css`)
+  .addEntry('main', `./js/main.js`)
+  .addStyleEntry('app', `./css/app.css`)
 
   .enableSingleRuntimeChunk()
   .cleanupOutputBeforeBuild()
