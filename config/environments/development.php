@@ -14,6 +14,7 @@ Config::define('SKELETON_OVERRIDE_SMTP', true);
  * WP Stateless https://github.com/wpCloud/wp-stateless/wiki/Constants
  */
 Config::define('WP_STATELESS_MEDIA_HIDE_SETTINGS_PANEL', false);
+Config::define('WP_STATELESS_MEDIA_HIDE_SETUP_ASSISTANT', false);
 
 if (file_exists('../../.private/service-account.json')) {
     Config::define('WP_STATELESS_MEDIA_BUCKET', 'wordpress-starter-kit');
