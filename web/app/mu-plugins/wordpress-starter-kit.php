@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name:  Wordpress Skeleton
+Plugin Name:  Sky Foundry Wordpress
 Plugin URI:   https://skyfoundry.agency
-Description:  Provides defaults for Wordpress Skeleton instances
+Description:  Provides sane defaults for Wordpress Starter Kit instances
 Version:      1.0.0
 Author:       Sky Foundry
 Author URI:   https://skyfoundry.agency
@@ -19,12 +19,12 @@ add_filter('option_permalink_structure', function ($option) {
 /**
  * Set the default theme
  */
-function wordpress_skeleton_default_theme () {
+function wordpress_starter_kit_default_theme () {
     return WP_DEFAULT_THEME;
 }
 
-add_filter('stylesheet', 'wordpress_skeleton_default_theme');
-add_filter('template', 'wordpress_skeleton_default_theme');
+add_filter('stylesheet', 'wordpress_starter_kit_default_theme');
+add_filter('template', 'wordpress_starter_kit_default_theme');
 
 /**
  * Development only overrides

@@ -1,4 +1,4 @@
-# Wordpress Skeleton
+# Wordpress Starter Kit
 
 ## Requirements
 
@@ -9,7 +9,7 @@
 
 1. Clone the repository:
    ```sh
-   $ git clone git@github.com:sky-foundry/wordpress-skeleton.git
+   $ git clone git@github.com:sky-foundry/wordpress-starter-kit.git
    ```
 2. Install dependencies:
    ```sh
