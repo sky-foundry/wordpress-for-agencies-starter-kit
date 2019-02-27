@@ -8,12 +8,12 @@
  * @since   Timber 0.1
  */
 
-if ( ! class_exists( 'Timber' ) ) {
-	add_action( 'admin_notices', function() {
+if (!class_exists('Timber')) {
+	add_action('admin_notices', function() {
 		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
 	});
 
-	add_filter('template_include', function( $template ) {
+	add_filter('template_include', function($template) {
 		return get_stylesheet_directory() . '/static/no-timber.html';
 	});
 
@@ -50,7 +50,9 @@ if (function_exists('acf_add_options_page')) {
  * You can move this to its own file and include here via php's include("MySite.php")
  */
 class StarterSite extends Timber\Site {
-	/** Add timber support. */
+	/**
+     * Add timber support.
+     */
 	public function __construct() {
 		add_action('after_setup_theme', array($this, 'theme_supports'));
 		add_filter('timber_context', array($this, 'add_to_context'));
@@ -62,17 +64,22 @@ class StarterSite extends Timber\Site {
 		parent::__construct();
 	}
     
-    /** This is where you can register custom post types. */
+    /**
+     * This is where you can register custom post types.
+     */
 	public function register_post_types() {
 
 	}
     
-    /** This is where you can register custom taxonomies. */
+    /**
+     * This is where you can register custom taxonomies.
+     */
 	public function register_taxonomies() {
 
 	}
 
-	/** This is where you add some context
+	/**
+     * This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
@@ -135,11 +142,22 @@ class StarterSite extends Timber\Site {
 		add_theme_support('menus');
 	}
 
-	/** This is where you can add your own functions to twig.
+	/**
+     * This is where you can add your own functions to twig.
 	 *
 	 * @param string $twig get extension.
 	 */
 	public function add_to_twig($twig) {
+        
+        $twig->addFunction(new Timber\Twig_Function('get_page_link', function ($id) {
+            if (is_string($id)) {
+                $page = get_page_by_path($id);
+                $id = $page->ID;
+            }
+
+            return get_page_link($id);
+        }));
+
 		$twig->addExtension(new Twig_Extension_StringLoader());
 
 		$versionStrategy = new JsonManifestVersionStrategy(
